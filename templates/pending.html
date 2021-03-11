@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pending Investigations</title>
-</head>
+{% block content %}
 
-<body>
-    {% for applicant in pending %}
-    {{ applicant.suspect_name }} <br>
-    {{ applicant.last_seen }} <br>
-    {{ applicant.crime_area }} <br>
-    {{ applicant.details }} <br>
-    {{ applicant.client_contact }} <br>
-    {% endfor %}
-</body>
 
-</html>
+<h2>extension</h2>
+{% for applicant in pending %}
+{{ applicant.suspect_name }} <br>
+{{ applicant.last_seen }} <br>
+{{ applicant.crime_area }} <br>
+{{ applicant.details }} <br>
+{{ applicant.client_contact }} <br>
+
+{% endfor %}
+{% endblock %}
