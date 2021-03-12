@@ -2,14 +2,15 @@
 
 {% block content %}
 
-
-<h2>extension</h2>
-{% for applicant in pending %}
-{{ applicant.suspect_name }} <br>
-{{ applicant.last_seen }} <br>
-{{ applicant.crime_area }} <br>
-{{ applicant.details }} <br>
-{{ applicant.client_contact }} <br>
+<div class="home">
+    <h2>extension</h2>
+    {% for applicant in pending %}
+    {{ applicant.suspect_name }} <br>
+    {{ applicant.last_seen }} <br>
+    {{ applicant.crime_area }} <br>
+    {{ applicant.details }} <br>
+    {{ applicant.client_contact }} <br>
+</div>
 
 {% endfor %}
 {% endblock %}
