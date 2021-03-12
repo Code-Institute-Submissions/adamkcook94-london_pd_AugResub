@@ -24,24 +24,28 @@
     <header>
         <nav class="nav-extended nav-color">
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo center">Logo</a>
+                <a href="{{ url_for('home') }}" class="brand-logo center">Logo</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="nav-text left hide-on-med-and-down">
-                    <li class="hvr-underline-from-center nav-item"><a href="#">Pending Investigation</a>
+                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('pending_inv') }}">Pending
+                            Investigation</a>
                     </li>
-                    <li class="hvr-underline-from-center nav-item"><a href="#">Admin Log In</a></li>
-
+                    <li class="hvr-underline-from-center nav-item"><a href="#">Submit Investigation</a></li>
+                    <li class="hvr-underline-from-center nav-item"><a href="#">Wanted Persons</a></li>
+                    <li class="hvr-underline-from-center nav-item"><a href="#">Stay Safe</a></li>
                 </ul>
             </div>
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
+            <li><a href="#">Home</a></li>
             <li><a href="#">Pending Investigation</a></li>
             <li><a href="#">Admin Log In</a></li>
-
+            <li><a href="#">Submit Investigation</a></li>
+            <li><a href="#">Wanted Persons</a></li>
+            <li><a href="#">Stay Safe</a></li>
         </ul>
     </header>
-    <h1>Base Template</h1>
     {% block content %}
     {% endblock %}
 

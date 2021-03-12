@@ -18,6 +18,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+def home():
+    return render_template("home.html")
+
+
 @app.route("/pending_inv")
 def pending_inv():
     pending = mongo.db.pending.find()
