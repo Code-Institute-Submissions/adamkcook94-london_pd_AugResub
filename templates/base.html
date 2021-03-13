@@ -24,12 +24,13 @@
     <header>
         <nav class="nav-extended nav-color">
             <div class="nav-wrapper">
-                <a href="{{ url_for('home') }}" class="brand-logo center">Logo</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="{{ url_for('home') }}" class="brand-logo center"><i class="fas fa-home"></i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="nav-text left hide-on-med-and-down">
-                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('pending_inv') }}">Pending
+                    <!-- <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('pending_inv') }}">Pending
                             Investigation</a>
-                    </li>
+                    </li> -->
+                    <li class="hvr-underline-from-center nav-item"><a href="#">Admin Log In</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="#">Submit Investigation</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="#">Wanted Persons</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="#">Stay Safe</a></li>
@@ -38,8 +39,8 @@
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Pending Investigation</a></li>
+            <li><a href="{{ url_for('home') }}"><i class="fas fa-home"></i></a></li>
+            <!-- <li><a href="#">Pending Investigation</a></li> -->
             <li><a href="#">Admin Log In</a></li>
             <li><a href="#">Submit Investigation</a></li>
             <li><a href="#">Wanted Persons</a></li>
