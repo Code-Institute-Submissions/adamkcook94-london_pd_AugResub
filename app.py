@@ -22,6 +22,11 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/admin_login")
+def admin_login():
+    return render_template("admin_login.html")
+
+
 @app.route("/pending_inv")
 def pending_inv():
     pending = mongo.db.pending.find()

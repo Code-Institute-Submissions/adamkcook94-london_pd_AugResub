@@ -30,7 +30,8 @@
                     <!-- <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('pending_inv') }}">Pending
                             Investigation</a>
                     </li> -->
-                    <li class="hvr-underline-from-center nav-item"><a href="#">Admin Log In</a></li>
+                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('admin_login') }}">Admin Log
+                            In</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="#">Submit Investigation</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="#">Wanted Persons</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="#">Stay Safe</a></li>
@@ -41,7 +42,7 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}"><i class="fas fa-home"></i></a></li>
             <!-- <li><a href="#">Pending Investigation</a></li> -->
-            <li><a href="#">Admin Log In</a></li>
+            <li><a href="{{ url_for('admin_login') }}">Admin Log In</a></li>
             <li><a href="#">Submit Investigation</a></li>
             <li><a href="#">Wanted Persons</a></li>
             <li><a href="#">Stay Safe</a></li>
