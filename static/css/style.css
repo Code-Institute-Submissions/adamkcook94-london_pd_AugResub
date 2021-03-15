@@ -29,3 +29,18 @@ body {
     color: #2b2d2f;
 }
 
+.card-panel {
+    background-color: #f8f8ff;
+}
+
+@media only screen and (max-width: 1400px) {
+  .icon-position {
+    margin-left: 160px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .icon-position {
+    margin-top: 15px;
+  }
+}
