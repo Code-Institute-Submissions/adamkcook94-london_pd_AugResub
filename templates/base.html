@@ -30,8 +30,9 @@
                     <!-- <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('pending_inv') }}">Pending
                             Investigation</a>
                     </li> -->
-                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('admin_login') }}">Admin Log
+                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('login') }}">Log
                             In</a></li>
+                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('register') }}">Register</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="#">Submit Investigation</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="#">Wanted Persons</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="#">Stay Safe</a></li>
@@ -42,14 +43,30 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}"><i class="fas fa-home"></i></a></li>
             <!-- <li><a href="#">Pending Investigation</a></li> -->
-            <li><a href="{{ url_for('admin_login') }}">Admin Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="#">Submit Investigation</a></li>
             <li><a href="#">Wanted Persons</a></li>
             <li><a href="#">Stay Safe</a></li>
         </ul>
     </header>
+
+    <section>
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </section>
+
     {% block content %}
     {% endblock %}
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
