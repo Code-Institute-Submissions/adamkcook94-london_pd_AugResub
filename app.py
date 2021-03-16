@@ -41,6 +41,7 @@ def register():
 
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
+        return redirect(url_for("my_submissions", username=session["user"]))
     return render_template("register.html")
 
 
@@ -55,6 +56,8 @@ def login():
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for(
+                    "my_submissions", username=session["user"]))
 
             else:
                 flash("Incorrect username or password")
@@ -64,6 +67,14 @@ def login():
             flash("Incorrect username or password")
             return redirect(url_for("login"))
     return render_template("login.html")
+
+
+@app.route("/my_submissions/<username>", methods=["GET", "POST"])
+def my_submissions(username):
+    # grab user from mongoDB. follow this pathway for specific user data.
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("my_submissions.html", username=username)
 
 
 @app.route("/pending_inv")
