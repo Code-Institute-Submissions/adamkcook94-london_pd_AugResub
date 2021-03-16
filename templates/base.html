@@ -27,18 +27,23 @@
                 <a href="{{ url_for('home') }}" class="brand-logo center icon-position"><i class="fas fa-home"></i></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="nav-text left hide-on-med-and-down">
+                    <li class="hvr-underline-from-center nav-item"><a href="#">Wanted Persons</a></li>
+                    <li class="hvr-underline-from-center nav-item"><a href="#">Stay Safe</a></li>
                     <!-- <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('pending_inv') }}">Pending
                             Investigation</a>
                     </li> -->
+
+
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('login') }}">Log
                             In</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('register') }}">Register</a></li>
+                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('logout') }}">Log
+                            Out</a></li>
                     <li class="hvr-underline-from-center nav-item"><a
                             href="{{ url_for('my_submissions', username=session['user']) }}">Your
                             Submissions</a></li>
                     <!-- <li class="hvr-underline-from-center nav-item"><a href="#">Submit Investigation</a></li> -->
-                    <li class="hvr-underline-from-center nav-item"><a href="#">Wanted Persons</a></li>
-                    <li class="hvr-underline-from-center nav-item"><a href="#">Stay Safe</a></li>
+
                 </ul>
             </div>
         </nav>
@@ -48,6 +53,7 @@
             <!-- <li><a href="#">Pending Investigation</a></li> -->
             <li><a href="{{ url_for('register') }}">Register</a></li>
             <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             <!-- <li><a href="#">Submit Investigation</a></li> -->
             <li><a href="{{ url_for('my_submissions', username=session['user']) }}">Your Submissions</a>
             </li>
