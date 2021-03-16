@@ -27,8 +27,7 @@
                 <a href="{{ url_for('home') }}" class="brand-logo center icon-position"><i class="fas fa-home"></i></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="nav-text left hide-on-med-and-down">
-                    <li class="hvr-underline-from-center nav-item"><a href="#">Wanted Persons</a></li>
-                    <li class="hvr-underline-from-center nav-item"><a href="#">Stay Safe</a></li>
+
 
                     {% if session.user %}
 
@@ -45,6 +44,9 @@
                     <!-- <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('pending_inv') }}">Pending
                             Investigation</a></li> -->
                     {% endif %}
+
+                    <li class="hvr-underline-from-center nav-item"><a href="#">Wanted Persons</a></li>
+                    <li class="hvr-underline-from-center nav-item"><a href="#">Stay Safe</a></li>
                 </ul>
             </div>
         </nav>
@@ -52,7 +54,6 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}"><i class="fas fa-home"></i></a></li>
             {% if session.user %}
-
             <li class="hvr-underline-from-center nav-item"><a
                     href="{{ url_for('my_submissions', username=session['user']) }}">Your
                     Submissions</a></li>
@@ -66,6 +67,8 @@
             <!-- <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('pending_inv') }}">Pending
                             Investigation</a></li> -->
             {% endif %}
+            <li class="hvr-underline-from-center nav-item"><a href="#">Wanted Persons</a></li>
+            <li class="hvr-underline-from-center nav-item"><a href="#">Stay Safe</a></li>
         </ul>
     </header>
 
