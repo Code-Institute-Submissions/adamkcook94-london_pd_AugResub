@@ -1,16 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 <div class="home">
-    <h2>extension</h2>
-    {% for applicant in pending %}
-    {{ applicant.suspect_name }} <br>
-    {{ applicant.last_seen }} <br>
-    {{ applicant.crime_area }} <br>
-    {{ applicant.details }} <br>
-    {{ applicant.client_contact }} <br>
+    <div class="container">
+        <div class="col s12">
+            <h2>extension</h2>
+            {% for applicant in pending %}
+            {{ applicant.suspect_name }} <br>
+            {{ applicant.last_seen }} <br>
+            {{ applicant.crime_area }} <br>
+            {{ applicant.details }} <br>
+            {{ applicant.client_contact }} <br>
+            <ul class="collapsible popout">
+                <li>
+                    <div class="collapsible-header"><i class="fas fa-user"></i>First</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="fas fa-user"></i>Second</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="fas fa-user"></i>Third</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
+
+
 
 {% endfor %}
 {% endblock %}
