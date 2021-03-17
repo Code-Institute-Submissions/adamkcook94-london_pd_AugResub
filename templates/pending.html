@@ -4,32 +4,32 @@
 <div class="home">
     <div class="container">
         <div class="col s12">
-            <h2>extension</h2>
-            {% for applicant in pending %}
-            {{ applicant.suspect_name }} <br>
-            {{ applicant.last_seen }} <br>
-            {{ applicant.crime_area }} <br>
-            {{ applicant.details }} <br>
-            {{ applicant.client_contact }} <br>
+            <h2 class="center-align">Pending Investigations</h2>
             <ul class="collapsible popout">
+                {% for applicant in pending %}
                 <li>
-                    <div class="collapsible-header"><i class="fas fa-user"></i>First</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    <div class="collapsible-header">
+                        <i class="fas fa-user"></i>
+                        <p>{{ applicant.suspect_name }}</p>
+                    </div>
+
+                    <div class="collapsible-body">
+                        <span>
+
+                            <p class="pi-font">Crime Area</p>
+                            <p>{{ applicant.crime_area }}</p>
+                            <p class="pi-font">Last Known Whereabouts</p>
+                            <p>{{ applicant.last_seen }}</p>
+                            <p class="pi-font">Crime Committed</p>
+                            <p>{{ applicant.details }}</p>
+                            <p class="pi-font">Client Contact Information</p>
+                            <p>{{ applicant.client_contact }}</p>
+                        </span>
+                    </div>
                 </li>
-                <li>
-                    <div class="collapsible-header"><i class="fas fa-user"></i>Second</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="fas fa-user"></i>Third</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
 </div>
-
-
-
-{% endfor %}
 {% endblock %}
