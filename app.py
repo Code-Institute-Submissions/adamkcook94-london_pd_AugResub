@@ -87,6 +87,11 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/submit_investigation")
+def submit_investigation():
+    return render_template("submit_investigation.html")
+
+
 @app.route("/pending_inv")
 def pending_inv():
     pending = mongo.db.pending.find()

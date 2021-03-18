@@ -32,9 +32,10 @@
                     {% if session.user %}
 
                     <li class="hvr-underline-from-center nav-item"><a
-                            href="{{ url_for('my_submissions', username=session['user']) }}">Your
+                            href="{{ url_for('my_submissions', username=session['user']) }}">{{ username }}
                             Submissions</a></li>
-                    <li class="hvr-underline-from-center nav-item"><a href="#">Submit Investigation</a></li>
+                    <li class="hvr-underline-from-center nav-item"><a
+                            href="{{ url_for('submit_investigation') }}">Submit Investigation</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('pending_inv') }}">Pending
                             Investigations</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('logout') }}">Log
@@ -59,7 +60,8 @@
             <li class="hvr-underline-from-center nav-item"><a
                     href="{{ url_for('my_submissions', username=session['user']) }}">Your
                     Submissions</a></li>
-            <li class="hvr-underline-from-center nav-item"><a href="#">Submit Investigation</a></li>
+            <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('submit_investigation') }}">Submit
+                    Investigation</a></li>
             <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('pending_inv') }}">Pending
                     Investigations</a></li>
             <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('logout') }}">Log
