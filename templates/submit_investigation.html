@@ -9,42 +9,63 @@
         </div>
         <div class="row">
             <form class="col s12" method="POST" action="">
-                <div class="row">
-                    <div class="input-field col s10 m10 offset-l1">
-                        <input id="family_name" type="text" class="validate">
-                        <label for="family_name">Family Name</label>
-                    </div>
-                    <div class="input-field col s10 m10 offset-l1">
-                        <input id="forename" type="text" class="validate">
-                        <label for="forename">Forename</label>
-                    </div>
-                    <div class="input-field col s10 m10 offset-l1">
-                        <input id="gender" type="text" class="validate">
-                        <label for="gender">Gender</label>
-                    </div>
-                    <div class="input-field col s10 m10 offset-l1">
-                        <input id="date_of_birth" type="text" class="validate">
-                        <label for="date_of_birth">Date of Birth</label>
-                    </div>
-                    <div class="input-field col s10 m10 offset-l1">
-                        <input id="place_of_birth" type="text" class="validate">
-                        <label for="place_of_birth">Place of Birth</label>
-                    </div>
-                    <div class="input-field col s10 m10 offset-l1">
-                        <input id="nationality" type="text" class="validate">
-                        <label for="nationality">Nationality</label>
-                    </div>
-                    <div class="input-field col s10 m10 offset-l1">
-                        <input id="ethnicity" type="text" class="validate">
-                        <label for="ethnicity">Ethnicity</label>
-                    </div>
-                    <div class="input-field col s10 m10 offset-l1">
-                        <input id="charges" type="text" class="validate">
-                        <label for="charges">Charges</label>
-                    </div>
-                    <div class="input-field col s10 m10 offset-l1">
-                        <input id="additional_info" type="text" class="validate">
-                        <label for="additional_info">Additional Information</label>
+                <div class="card-panel">
+                    <div class="row">
+                        <div class="input-field col s5 offset-l1">
+                            <input id="family_name" type="text" maxlength="20" class="validate" required>
+                            <label for="family_name">Family Name</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input id="forename" type="text" maxlength="20" class="validate" required>
+                            <label for="forename">Forename</label>
+                        </div>
+                        <div class="input-field col s5 offset-l1">
+                            <input id="aliases" type="text" maxlength="30" class="validate">
+                            <label for="aliases">Aliases</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input id="gender" type="text" maxlength="15" class="validate" required>
+                            <label for="gender">Gender</label>
+                        </div>
+                        <div class="input-field col s5 offset-l1">
+                            <input id="date_of_birth" type="text" class="datepicker validate">
+                            <label for="date_of_birth">Date of Birth</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input id="nationality" type="text" maxlength="56" class="validate">
+                            <label for="nationality">Nationality</label>
+                        </div>
+                        <div class="input-field col s5 offset-l1">
+                            <input id="ethnicity" type="text" maxlength="20" class="validate">
+                            <label for="ethnicity">Ethnicity</label>
+                            <span class="helper-text">E.g. White,
+                                Asian, Black, Latino etc.</span>
+                        </div>
+                        <div class="input-field col s5">
+                            <input id="charges" type="text" maxlength="75" class="validate" required>
+                            <label for="charges">Charges</label>
+                            <span class="helper-text">Burglary, Assault, Fraud,
+                                etc.</span>
+                        </div>
+                        <div class="input-field col s5 offset-l1">
+                            <input id="phone_number" type="tel" class="validate" maxlength="11" pattern="^[0-9]{11,11}$"
+                                required>
+                            <label for="phone_number">Client Phone Number</label>
+                            <span class="helper-text" data-error="Please enter your 11 digit phone number."
+                                data-success="Valid phone number">Phone number required.</span>
+                        </div>
+                        <div class="input-field col s5">
+                            <input id="email" type="email" class="validate" required>
+                            <label for="email">Email</label>
+                            <span class="helper-text" data-error="Invalid E-mail address"
+                                data-success="Valid E-mail Address">E-mail required.</span>
+                        </div>
+                        <div class="input-field col s10 m10 offset-l1">
+                            <!-- <input id="additional_info" type="text" class="validate">
+                            <label for="additional_info">Additional Information</label> -->
+                            <textarea id="additional_info" type="text" class="materialize-textarea"></textarea>
+                            <label for="additional_info">Additional Information</label>
+                        </div>
                     </div>
                 </div>
             </form>
