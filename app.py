@@ -89,7 +89,8 @@ def logout():
 
 @app.route("/submit_investigation")
 def submit_investigation():
-    return render_template("submit_investigation.html")
+    crime = mongo.db.crime.find().sort("crime_name", 1)
+    return render_template("submit_investigation.html", crime=crime)
 
 
 @app.route("/pending_inv")

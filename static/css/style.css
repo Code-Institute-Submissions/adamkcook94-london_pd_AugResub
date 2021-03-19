@@ -48,3 +48,10 @@ body {
 .pi-font {
     font-weight: bold;
 }
+
+@media only screen and (max-height: 600px) {
+    .crime-responsivity {
+        font-size: small;
+        float: left;
+    }
+}
