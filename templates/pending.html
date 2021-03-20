@@ -10,20 +10,21 @@
                 <li>
                     <div class="collapsible-header">
                         <i class="fas fa-user"></i>
-                        <p>{{ applicant.suspect_name }}</p>
+                        <p>{{ applicant.family_name }}, {{applicant.forename }}, {{ applicant.last_seen }}</p>
                     </div>
 
                     <div class="collapsible-body">
                         <span>
-
-                            <p class="pi-font">Crime Area</p>
-                            <p>{{ applicant.crime_area }}</p>
-                            <p class="pi-font">Last Known Whereabouts</p>
-                            <p>{{ applicant.last_seen }}</p>
-                            <p class="pi-font">Crime Committed</p>
-                            <p>{{ applicant.details }}</p>
+                            <p class="pi-font">Charge</p>
+                            <p>{{ applicant.crime_name }}</p>
+                            <p class="pi-font">Gender</p>
+                            <p>{{ applicant.gender }}</p>
+                            <p class="pi-font">Date of Birth</p>
+                            <p>{{ applicant.date_of_birth }}</p>
                             <p class="pi-font">Client Contact Information</p>
-                            <p>{{ applicant.client_contact }}</p>
+                            <p>{{ applicant.phone_number }}, {{ applicant.email }}</p>
+                            <p class="pi-font">Additional Information</p>
+                            <p>{{ applicant.additional_info }}</p>
                         </span>
                     </div>
                 </li>
