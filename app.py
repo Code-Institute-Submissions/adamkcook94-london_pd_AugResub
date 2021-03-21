@@ -74,6 +74,7 @@ def my_submissions(username):
     # grab user from mongoDB. follow this pathway for specific user data.
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+
     if session["user"]:
         return render_template("my_submissions.html", username=username)
 
@@ -110,8 +111,24 @@ def submit_investigation():
     return render_template("submit_investigation.html", crime=crime)
 
 
-@app.route("/pending_inv")
+@app.route("/pending_inv", methods=["GET", "POST"])
 def pending_inv():
+    if request.method == "POST":
+        wanted = {
+            "crime_name": request.form.get("crime_name"),
+            "family_name": request.form.get("family_name"),
+            "forename": request.form.get("forename"),
+            "gender": request.form.get("gender"),
+            "last_seen": request.form.get("last_seen"),
+            "date_of_birth": request.form.get("date_of_birth"),
+            "nationality": request.form.get("nationality"),
+            "ethnicity": request.form.get("ethnicity"),
+            "phone_number": request.form.get("phone_number"),
+            "email": request.form.get("email"),
+            "additional_info": request.form.get("additional_info"),
+        }
+        mongo.db.wanted_persons.insert_one(wanted)
+        flash("Profile submitted")
     pending = mongo.db.pending.find()
     return render_template("pending.html", pending=pending)
 
