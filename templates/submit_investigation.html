@@ -35,7 +35,7 @@
                                 <option value="" disabled selected>Charges</option>
                                 {% for charges in crime %}
                                 <option value="{{ charges.crime_name }}">
-                                    {{ charges.crime_name }}</option>
+                                    {{- charges.crime_name -}}</option>
                                 {% endfor %}
                             </select>
 
