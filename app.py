@@ -109,6 +109,7 @@ def submit_investigation():
             "phone_number": request.form.get("phone_number"),
             "email": request.form.get("email"),
             "additional_info": request.form.get("additional_info"),
+            "submitted_by": session["user"]
         }
         mongo.db.pending.insert_one(investigation)
         flash("Investigation submitted.")
@@ -119,6 +120,24 @@ def submit_investigation():
 
 @app.route("/edit_inv/<pendings_id>", methods=["GET", "POST"])
 def edit_inv(pendings_id):
+    if request.method == "POST":
+        investigation = {
+            "crime_name": request.form.get("crime_name"),
+            "family_name": request.form.get("family_name").upper(),
+            "forename": request.form.get("forename"),
+            "gender": request.form.get("gender"),
+            "last_seen": request.form.get("last_seen"),
+            "date_of_birth": request.form.get("date_of_birth"),
+            "nationality": request.form.get("nationality"),
+            "ethnicity": request.form.get("ethnicity"),
+            "phone_number": request.form.get("phone_number"),
+            "email": request.form.get("email"),
+            "additional_info": request.form.get("additional_info"),
+            "submitted_by": session["user"]
+        }
+        mongo.db.pending.update({"_id": ObjectId(pendings_id)}, investigation)
+        flash("Investigation edited.")
+        return redirect(url_for('pending_inv'))
     pendings = mongo.db.pending.find_one({"_id": ObjectId(pendings_id)})
     crime = mongo.db.crime.find().sort("crime_name", 1)
     return render_template("edit_inv.html", pendings=pendings, crime=crime)
