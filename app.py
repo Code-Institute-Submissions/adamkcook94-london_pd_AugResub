@@ -111,24 +111,15 @@ def submit_investigation():
     return render_template("submit_investigation.html", crime=crime)
 
 
-@app.route("/pending_inv", methods=["GET", "POST"])
+# @app.route("/edit_inv/<pending_id>", methods=["GET", "POST"])
+# def edit_inv(pending_id):
+#     pending = mongo.db.pending.find.one({"_id": ObjectId(pending_id)})
+#     crime = mongo.db.crime.find().sort("crime_name", 1)
+#     return render_template("edit_inv.html",
+#                            pending=pending, crime=crime)
+
+@app.route("/pending_inv")
 def pending_inv():
-    if request.method == "POST":
-        wanted = {
-            "crime_name": request.form.get("crime_name"),
-            "family_name": request.form.get("family_name"),
-            "forename": request.form.get("forename"),
-            "gender": request.form.get("gender"),
-            "last_seen": request.form.get("last_seen"),
-            "date_of_birth": request.form.get("date_of_birth"),
-            "nationality": request.form.get("nationality"),
-            "ethnicity": request.form.get("ethnicity"),
-            "phone_number": request.form.get("phone_number"),
-            "email": request.form.get("email"),
-            "additional_info": request.form.get("additional_info"),
-        }
-        mongo.db.wanted_persons.insert_one(wanted)
-        flash("Profile submitted")
     pending = mongo.db.pending.find()
     return render_template("pending.html", pending=pending)
 
@@ -137,3 +128,21 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+
+
+# if request.method == "POST":
+#         wanted = {
+#             "crime_name": request.form.get("crime_name"),
+#             "family_name": request.form.get("family_name"),
+#             "forename": request.form.get("forename"),
+#             "gender": request.form.get("gender"),
+#             "last_seen": request.form.get("last_seen"),
+#             "date_of_birth": request.form.get("date_of_birth"),
+#             "nationality": request.form.get("nationality"),
+#             "ethnicity": request.form.get("ethnicity"),
+#             "phone_number": request.form.get("phone_number"),
+#             "email": request.form.get("email"),
+#             "additional_info": request.form.get("additional_info"),
+#         }
+#         mongo.db.wanted_persons.insert_one(wanted)
+#         flash("Profile submitted")

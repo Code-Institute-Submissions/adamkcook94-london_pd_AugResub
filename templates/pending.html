@@ -22,26 +22,28 @@
                     </div>
 
                     <div class="collapsible-body card-panel">
-                        <form class="col s12" method="POST" action="{{ url_for('pending_inv') }}">
-                            <span>
-                                <p class="pi-font">Charge</p>
-                                <p>{{ applicant.crime_name }}</p>
-                                <p class="pi-font">Gender</p>
-                                <p>{{ applicant.gender }}</p>
-                                <p class="pi-font">Date of Birth</p>
-                                <p>{{ applicant.date_of_birth }}</p>
-                                <p class="pi-font">Client Contact Information</p>
-                                <p>{{ applicant.phone_number }}, {{ applicant.email }}</p>
-                                <p class="pi-font">Additional Information</p>
-                                <p>{{ applicant.additional_info }}</p>
-                            </span>
-                        </form>
+
+                        <span>
+                            <p class="pi-font">Charge</p>
+                            <p>{{ applicant.crime_name }}</p>
+                            <p class="pi-font">Gender</p>
+                            <p>{{ applicant.gender }}</p>
+                            <p class="pi-font">Date of Birth</p>
+                            <p>{{ applicant.date_of_birth }}</p>
+                            <p class="pi-font">Client Contact Information</p>
+                            <p>{{ applicant.phone_number }}, {{ applicant.email }}</p>
+                            <p class="pi-font">Additional Information</p>
+                            <p>{{ applicant.additional_info }}</p>
+                        </span>
+
                     </div>
                 </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
 </div>
+{% endblock %}
 
 
 <!-- <span>
@@ -56,5 +58,7 @@
     <p class="pi-font">Additional Information</p>
     <p>{{ applicant.additional_info }}</p>
 </span> -->
-{% endfor %}
-{% endblock %}
+
+
+
+<!-- {{ url_for('edit_inv', pending_id=pending._id) }} -->
