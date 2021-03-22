@@ -13,14 +13,14 @@
                             <i class="fas fa-user user-icon"></i>
                         </div>
                         <div class="col s8">
-                            <p>{{ pendings.family_name }}, {{ pendings.forename }}, {{ pendings.last_seen }}, <em>
-                                    {{ pendings.submitted_by }}</em></p>
+                            <p>{{ pendings.family_name }}, {{ pendings.forename }}, {{ pendings.last_seen }}</p>
                         </div>
                         <div class="col s3">
                             {% if session.user|lower == pendings.submitted_by|lower %}
-                            <a href="" class="btn-small blue post-button">POST</a>
                             <a href="{{ url_for('edit_inv', pendings_id=pendings._id) }}"
-                                class="btn-small red edit-button">EDIT</a>
+                                class="btn-small blue edit-button">EDIT</a>
+                            <a href="{{ url_for('delete_inv', pendings_id=pendings._id) }}"
+                                class="btn-small red delete-button">DELETE</a>
                             {% endif %}
                         </div>
                     </div>

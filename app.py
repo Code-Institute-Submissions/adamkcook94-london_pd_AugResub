@@ -143,6 +143,13 @@ def edit_inv(pendings_id):
     return render_template("edit_inv.html", pendings=pendings, crime=crime)
 
 
+@app.route("/delete_task/<pendings_id>")
+def delete_inv(pendings_id):
+    mongo.db.pending.remove({"_id": ObjectId(pendings_id)})
+    flash("Investigation deleted")
+    return redirect(url_for("pending_inv"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

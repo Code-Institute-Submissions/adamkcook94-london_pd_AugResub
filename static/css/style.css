@@ -60,27 +60,28 @@ body {
     margin-top: 10px;
 }
 
-.post-button {
+.delete-button {
     margin-top: 10px;
-    margin-left: 20px;
+    
 }
 
 .edit-button {
     margin-top: 10px;
+    margin-left: 20px;
 }
 
 @media only screen and (max-width: 486px) {
     .edit-button {
         margin-left: 70px;
-        width: 66px;
+        width: 75px;
         margin-top: 10px;
     }
 }
 
 @media only screen and (max-width: 486px) {
-.post-button {
+.delete-button {
     margin-left: 70px;
-    width: 66px;
+    width: 75px;
     margin-top: 10px;
 } 
 }
@@ -88,15 +89,15 @@ body {
 @media only screen and (max-width: 350px) {
     .edit-button {
         margin-left: 50px;
-        width: 66px;
+        width: 75px;
         margin-top: 10px;
     }
 }
 
 @media only screen and (max-width: 350px) {
-.post-button {
+.delete-button {
     margin-left: 50px;
-    width: 66px;
+    width: 75px;
     margin-top: 10px;
 } 
 }
