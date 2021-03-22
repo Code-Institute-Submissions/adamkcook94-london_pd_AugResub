@@ -55,3 +55,48 @@ body {
         float: left;
     }
 }
+
+.user-icon {
+    margin-top: 10px;
+}
+
+.post-button {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.edit-button {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 486px) {
+    .edit-button {
+        margin-left: 70px;
+        width: 66px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 486px) {
+.post-button {
+    margin-left: 70px;
+    width: 66px;
+    margin-top: 10px;
+} 
+}
+
+@media only screen and (max-width: 350px) {
+    .edit-button {
+        margin-left: 50px;
+        width: 66px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+.post-button {
+    margin-left: 50px;
+    width: 66px;
+    margin-top: 10px;
+} 
+}

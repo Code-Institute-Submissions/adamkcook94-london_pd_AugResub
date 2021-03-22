@@ -9,10 +9,19 @@
                 {% for applicant in pending %}
                 <li>
                     <div class="collapsible-header">
-                        <i class="fas fa-user"></i>
-                        <p>{{ applicant.family_name }}, {{applicant.forename }}, {{ applicant.last_seen }}</p>
+                        <div class="col s1">
+                            <i class="fas fa-user user-icon"></i>
+                        </div>
+                        <div class="col s8">
+                            <p>{{ applicant.family_name }}, {{applicant.forename }}, {{ applicant.last_seen }}</p>
+                        </div>
+                        <div class="col s3">
+                            <a href="" class="btn-small blue post-button">POST</a>
+                            <a href="" class="btn-small red edit-button">EDIT</a>
+                        </div>
                     </div>
-                    <div class="collapsible-body">
+
+                    <div class="collapsible-body card-panel">
                         <form class="col s12" method="POST" action="{{ url_for('pending_inv') }}">
                             <span>
                                 <p class="pi-font">Charge</p>
@@ -26,10 +35,6 @@
                                 <p class="pi-font">Additional Information</p>
                                 <p>{{ applicant.additional_info }}</p>
                             </span>
-                            <button type="submit" class="btn-large">
-                                Submit
-                                <i class="fas fa-share"></i>
-                            </button>
                         </form>
                     </div>
                 </li>
