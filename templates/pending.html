@@ -6,18 +6,19 @@
         <div class="col s12">
             <h3 class="center-align">Pending Investigations</h3>
             <ul class="collapsible popout">
-                {% for applicant in pending %}
+                {% for pendings in pending %}
                 <li>
                     <div class="collapsible-header">
                         <div class="col s1">
                             <i class="fas fa-user user-icon"></i>
                         </div>
                         <div class="col s8">
-                            <p>{{ applicant.family_name }}, {{applicant.forename }}, {{ applicant.last_seen }}</p>
+                            <p>{{ pendings.family_name }}, {{ pendings.forename }}, {{ pendings.last_seen }}</p>
                         </div>
                         <div class="col s3">
                             <a href="" class="btn-small blue post-button">POST</a>
-                            <a href="" class="btn-small red edit-button">EDIT</a>
+                            <a href="{{ url_for('edit_inv', pendings_id=pendings._id) }}"
+                                class="btn-small red edit-button">EDIT</a>
                         </div>
                     </div>
 
@@ -25,15 +26,15 @@
 
                         <span>
                             <p class="pi-font">Charge</p>
-                            <p>{{ applicant.crime_name }}</p>
+                            <p>{{ pendings.crime_name }}</p>
                             <p class="pi-font">Gender</p>
-                            <p>{{ applicant.gender }}</p>
+                            <p>{{ pendings.gender }}</p>
                             <p class="pi-font">Date of Birth</p>
-                            <p>{{ applicant.date_of_birth }}</p>
+                            <p>{{ pendings.date_of_birth }}</p>
                             <p class="pi-font">Client Contact Information</p>
-                            <p>{{ applicant.phone_number }}, {{ applicant.email }}</p>
+                            <p>{{ pendings.phone_number }}, {{ pendings.email }}</p>
                             <p class="pi-font">Additional Information</p>
-                            <p>{{ applicant.additional_info }}</p>
+                            <p>{{ pendings.additional_info }}</p>
                         </span>
 
                     </div>
@@ -44,21 +45,3 @@
     </div>
 </div>
 {% endblock %}
-
-
-<!-- <span>
-    <p class="pi-font">Charge</p>
-    <p>{{ applicant.crime_name }}</p>
-    <p class="pi-font">Gender</p>
-    <p>{{ applicant.gender }}</p>
-    <p class="pi-font">Date of Birth</p>
-    <p>{{ applicant.date_of_birth }}</p>
-    <p class="pi-font">Client Contact Information</p>
-    <p>{{ applicant.phone_number }}, {{ applicant.email }}</p>
-    <p class="pi-font">Additional Information</p>
-    <p>{{ applicant.additional_info }}</p>
-</span> -->
-
-
-
-<!-- {{ url_for('edit_inv', pending_id=pending._id) }} -->

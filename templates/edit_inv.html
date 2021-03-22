@@ -5,10 +5,10 @@
 <div class="home">
     <div class="container">
         <div class="col s12">
-            <h3 class="center-align">Submit Investigation</h3>
+            <h3 class="center-align">Edit Investigation</h3>
         </div>
         <div class="row">
-            <form class="col s12" method="POST" action="{{ url_for('edit_inv', pending_id=pending._id) }}">
+            <form class="col s12" method="POST" action="{{ url_for('edit_inv', pendings_id=pendings._id) }}">
                 <div class="card-panel">
 
                     <div class="row">
@@ -78,7 +78,7 @@
                     <div class="row">
                         <div class="col s12 center-align">
                             <button type="submit" class="btn-large">
-                                Submit
+                                Edit
                                 <i class="fas fa-share"></i>
                             </button>
                         </div>
