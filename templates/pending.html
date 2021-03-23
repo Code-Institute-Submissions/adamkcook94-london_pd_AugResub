@@ -5,15 +5,14 @@
     <div class="container">
         <div class="col s12">
             <h3 class="center-align">Pending Investigations</h3>
-
-            <div class="row card-panel grey lighten-5">
+            <div class="row card-panel white col s12">
                 <form action="{{ url_for('search') }}" method="POST" class="col s12">
                     <div class="row valign-wrapper center-align">
-                        <div class="input-field col s12 m8">
+                        <div class="input-field col s9">
                             <input type="text" name="query" id="query" minlength="3" class="validate" required>
                             <label for="query">Search</label>
                         </div>
-                        <div class="col s12 m4">
+                        <div class="col s3">
                             <a href="{{ url_for('pending_inv') }}" class="red btn text-shadow">Reset</a>
                             <button type="submit" class="blue btn text-shadow">
                                 Search
@@ -24,6 +23,7 @@
             </div>
             {% if pending.count() > 0 %}
             <ul class="collapsible popout">
+
                 {% for pendings in pending %}
                 <li>
                     <div class="collapsible-header">
@@ -63,8 +63,17 @@
                 {% endfor %}
             </ul>
             {% else %}
-            <h1>Nothing found</h1>
+            <h5 class="center-align">Nothing found</h5>
             {% endif %}
+
+            {% for user in users %}
+            {% if session.user|lower == user.admin_user %}
+            <h1>You're an admin!</h1>
+            {% endif %}
+
+
+            {% endfor %}
+
         </div>
     </div>
 </div>

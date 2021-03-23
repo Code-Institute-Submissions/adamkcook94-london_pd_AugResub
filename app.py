@@ -26,7 +26,8 @@ def home():
 @app.route("/pending_inv")
 def pending_inv():
     pending = mongo.db.pending.find()
-    return render_template("pending.html", pending=pending)
+    users = mongo.db.users.find()
+    return render_template("pending.html", pending=pending, users=users)
 
 
 @app.route("/search", methods=["GET", "POST"])
