@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="home">
+    <div class="container">
+        <div class="col s12">
+            <h3 class="center-align">Wanted Persons</h3>
+            <div class="row card-panel white col s12">
+                <form action="{{ url_for('search') }}" method="POST" class="col s12">
+                    <div class="row valign-wrapper center-align">
+                        <div class="input-field col s9">
+                            <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                            <label for="query">Search</label>
+                        </div>
+                        <div class="col s3">
+                            <a href="{{ url_for('wanted') }}" class="red btn text-shadow">Reset</a>
+                            <button type="submit" class="blue btn text-shadow">
+                                Search
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            {% for wanted in wanted_persons %}
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="#">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">{{ wanted.family_name }},
+                        {{ wanted.forename }}<i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Card Title<i
+                            class="material-icons right">close</i></span>
+                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+            </div>
+            {% endfor %}
+            <div>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

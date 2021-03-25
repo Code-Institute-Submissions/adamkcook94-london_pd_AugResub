@@ -23,6 +23,14 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/wanted")
+def wanted():
+    wanted_persons = mongo.db.wanted_persons.find()
+    users = mongo.db.users.find()
+    return render_template("wanted_persons.html",
+                           wanted_persons=wanted_persons, users=users)
+
+
 @app.route("/pending_inv")
 def pending_inv():
     pending = mongo.db.pending.find()

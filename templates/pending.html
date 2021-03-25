@@ -23,7 +23,6 @@
             </div>
             {% if pending.count() > 0 %}
             <ul class="collapsible popout">
-
                 {% for pendings in pending %}
                 <li>
                     <div class="collapsible-header">
@@ -42,9 +41,7 @@
                             {% endif %}
                         </div>
                     </div>
-
                     <div class="collapsible-body card-panel">
-
                         <span>
                             <p class="pi-font">Charge</p>
                             <p>{{ pendings.crime_name }}</p>
@@ -57,24 +54,16 @@
                             <p class="pi-font">Additional Information</p>
                             <p>{{ pendings.additional_info }}</p>
                         </span>
-
                     </div>
+
                 </li>
                 {% endfor %}
             </ul>
             {% else %}
             <h5 class="center-align">Nothing found</h5>
             {% endif %}
-
-            {% for user in users %}
-            {% if session.user|lower == user.admin_user %}
-            <h1>You're an admin!</h1>
-            {% endif %}
-
-
-            {% endfor %}
-
         </div>
     </div>
 </div>
+
 {% endblock %}
