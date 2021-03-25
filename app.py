@@ -127,7 +127,7 @@ def submit_investigation():
             "additional_info": request.form.get("additional_info"),
             "submitted_by": session["user"]
         }
-        mongo.db.pending.insert_one(investigation)
+        mongo.db.wanted_persons.insert_one(investigation)
         flash("Investigation submitted.")
         return redirect(url_for('home'))
     crime = mongo.db.crime.find().sort("crime_name", 1)
