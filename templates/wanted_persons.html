@@ -24,18 +24,37 @@
 
             </div>
             {% for wanted in wanted_persons %}
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="#">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">{{ wanted.family_name }},
-                        {{ wanted.forename }}<i class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i
-                            class="material-icons right">close</i></span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+
+            <div class="row">
+                <div class="col s12 m5 l4 offset-s2">
+                    <div class="card mugshot-card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator img-fluid" src="../static/images/escobar.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4 wanted-name">
+                                {{ wanted.family_name }},
+                                {{ wanted.forename }}<i class="fas fa-caret-up right"></i>
+                            </span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title pi-font">{{ wanted.family_name }},
+                                {{ wanted.forename }}<i class="fas fa-times right"></i></span>
+                            <span>
+                                <p class="pi-font">Charge</p>
+                                <p>{{ wanted.crime_name }}</p>
+                                <p class="pi-font">Gender</p>
+                                <p>{{ wanted.gender }}</p>
+                                <p class="pi-font">Date of Birth</p>
+                                <p>{{ wanted.date_of_birth }}</p>
+                                <p class="pi-font">Client Contact Information</p>
+                                <p>{{ wanted.phone_number }}, {{ wanted.email }}</p>
+                                <p class="pi-font">Additional Information</p>
+                                <p>{{ wanted.additional_info }}</p>
+                            </span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             {% endfor %}

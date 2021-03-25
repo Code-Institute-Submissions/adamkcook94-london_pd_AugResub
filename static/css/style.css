@@ -101,3 +101,17 @@ body {
     margin-top: 10px;
 } 
 }
+
+@media only screen and (max-width: 600px) {
+.mugshot-card {
+    width: 60%;
+}
+
+/* .mugshot-card {
+    width: 60%;
+} */
+
+.card-reveal {
+    height: 70%;
+}
+
