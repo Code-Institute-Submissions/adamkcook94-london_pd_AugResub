@@ -112,3 +112,14 @@ body {
     height: 70%;
 }
 
+.wanted-list {
+    display: inline;
+    float: left;
+}
+
+.mugshot {
+    display: block;
+    padding: 10px;
+    border: 1px solid red;
+    margin-right: 5px;
+}
