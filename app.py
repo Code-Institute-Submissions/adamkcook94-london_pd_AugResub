@@ -134,6 +134,14 @@ def submit_investigation():
     return render_template("submit_investigation.html", crime=crime)
 
 
+@app.route("/edit/<wanted_id>", methods=["GET", "POST"])
+def edit(wanted_id):
+    wanted = mongo.db.wanted_persons.find_one({"_id": ObjectId(wanted_id)})
+
+    crime = mongo.db.crime.find().sort("crime_name", 1)
+    return render_template("edit.html", wanted=wanted, crime=crime)
+
+
 @app.route("/edit_inv/<pendings_id>", methods=["GET", "POST"])
 def edit_inv(pendings_id):
     if request.method == "POST":

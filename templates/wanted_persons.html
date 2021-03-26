@@ -34,7 +34,8 @@
                             <span class="card-title activator grey-text text-darken-4 wanted-name">
                                 {{ wanted.family_name }},
                                 {{ wanted.forename }}
-                                <a href="#" class="btn-small blue edit-button"><i class="far fa-edit"></i></a>
+                                <a href="{{ url_for('edit', wanted_id=wanted._id) }}"
+                                    class="btn-small blue edit-button"><i class="far fa-edit"></i></a>
                                 <a href="#" class="btn-small red delete-button"><i class="far fa-trash-alt"></i></a>
                                 <i class="fas fa-caret-up right"></i>
                             </span>
