@@ -31,6 +31,15 @@ def wanted():
                            wanted_persons=wanted_persons, users=users)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    wanted_persons = mongo.db.wanted_persons.find(
+        {"$text": {"$search": query}})
+    return render_template("wanted_persons.html",
+                           wanted_persons=wanted_persons)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

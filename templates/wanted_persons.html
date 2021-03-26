@@ -23,10 +23,14 @@
                 </form>
 
             </div>
-            {% for wanted in wanted_persons %}
+
+
             <div class="row">
                 <div class="col s12 m5 l4 offset-s1">
+
+                    {% if wanted_persons.count() > 0 %}
                     <div class="card mugshot-card">
+                        {% for wanted in wanted_persons %}
                         <div class="card-image waves-effect waves-block waves-light">
                             <img class="activator img-fluid" src="../static/images/escobar.png">
                         </div>
@@ -59,10 +63,15 @@
                                 <p>{{ wanted.additional_info }}</p>
                             </span>
                         </div>
+                        {% endfor %}
                     </div>
+                    {% else %}
+                    <h3 class="center-align">No results found.</h3>
+                    {% endif %}
+
                 </div>
             </div>
-            {% endfor %}
+
             <div>
 
             </div>
