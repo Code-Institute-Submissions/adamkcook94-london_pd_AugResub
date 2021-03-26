@@ -31,20 +31,6 @@ def wanted():
                            wanted_persons=wanted_persons, users=users)
 
 
-@app.route("/pending_inv")
-def pending_inv():
-    pending = mongo.db.pending.find()
-    users = mongo.db.users.find()
-    return render_template("pending.html", pending=pending, users=users)
-
-
-@app.route("/search", methods=["GET", "POST"])
-def search():
-    query = request.form.get("query")
-    pending = mongo.db.pending.find({"$text": {"$search": query}})
-    return render_template("pending.html", pending=pending)
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -158,31 +144,6 @@ def edit(wanted_id):
     wanted = mongo.db.wanted_persons.find_one({"_id": ObjectId(wanted_id)})
     crime = mongo.db.crime.find().sort("crime_name", 1)
     return render_template("edit.html", wanted=wanted, crime=crime)
-
-
-@app.route("/edit_inv/<pendings_id>", methods=["GET", "POST"])
-def edit_inv(pendings_id):
-    if request.method == "POST":
-        investigation = {
-            "crime_name": request.form.get("crime_name"),
-            "family_name": request.form.get("family_name").upper(),
-            "forename": request.form.get("forename"),
-            "gender": request.form.get("gender"),
-            "last_seen": request.form.get("last_seen"),
-            "date_of_birth": request.form.get("date_of_birth"),
-            "nationality": request.form.get("nationality"),
-            "ethnicity": request.form.get("ethnicity"),
-            "phone_number": request.form.get("phone_number"),
-            "email": request.form.get("email"),
-            "additional_info": request.form.get("additional_info"),
-            "submitted_by": session["user"]
-        }
-        mongo.db.pending.update({"_id": ObjectId(pendings_id)}, investigation)
-        flash("Investigation edited.")
-        return redirect(url_for('pending_inv'))
-    pendings = mongo.db.pending.find_one({"_id": ObjectId(pendings_id)})
-    crime = mongo.db.crime.find().sort("crime_name", 1)
-    return render_template("edit_inv.html", pendings=pendings, crime=crime)
 
 
 @app.route("/delete_task/<wanted_id>")
