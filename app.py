@@ -185,11 +185,11 @@ def edit_inv(pendings_id):
     return render_template("edit_inv.html", pendings=pendings, crime=crime)
 
 
-@app.route("/delete_task/<pendings_id>")
-def delete_inv(pendings_id):
-    mongo.db.pending.remove({"_id": ObjectId(pendings_id)})
+@app.route("/delete_task/<wanted_id>")
+def delete_inv(wanted_id):
+    mongo.db.wanted_persons.remove({"_id": ObjectId(wanted_id)})
     flash("Investigation deleted")
-    return redirect(url_for("pending_inv"))
+    return redirect(url_for("wanted"))
 
 
 if __name__ == "__main__":
