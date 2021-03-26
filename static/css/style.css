@@ -123,3 +123,11 @@ body {
     border: 1px solid red;
     margin-right: 5px;
 }
+
+.previous-icon {
+    margin: 10px;
+}
+
+.next-icon {
+    margin: 10px;
+}
