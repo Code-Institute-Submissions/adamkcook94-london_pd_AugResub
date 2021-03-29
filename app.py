@@ -120,26 +120,33 @@ def logout():
     return redirect(url_for("login"))
 
 
+# refactor from here
+
+def form_submission():
+    investigation = {
+        "crime_name": request.form.get("crime_name"),
+        "family_name": request.form.get("family_name").upper(),
+        "forename": request.form.get("forename"),
+        "gender": request.form.get("gender"),
+        "last_seen": request.form.get("last_seen"),
+        "date_of_birth": request.form.get("date_of_birth"),
+        "nationality": request.form.get("nationality"),
+        "ethnicity": request.form.get("ethnicity"),
+        "phone_number": request.form.get("phone_number"),
+        "email": request.form.get("email"),
+        "additional_info": request.form.get("additional_info"),
+        "submitted_by": session["user"]
+    }
+    mongo.db.wanted_persons.insert_one(investigation)
+
+
 @app.route("/submit_investigation", methods=["GET", "POST"])
 def submit_investigation():
     if request.method == "POST":
-        investigation = {
-            "crime_name": request.form.get("crime_name"),
-            "family_name": request.form.get("family_name").upper(),
-            "forename": request.form.get("forename"),
-            "gender": request.form.get("gender"),
-            "last_seen": request.form.get("last_seen"),
-            "date_of_birth": request.form.get("date_of_birth"),
-            "nationality": request.form.get("nationality"),
-            "ethnicity": request.form.get("ethnicity"),
-            "phone_number": request.form.get("phone_number"),
-            "email": request.form.get("email"),
-            "additional_info": request.form.get("additional_info"),
-            "submitted_by": session["user"]
-        }
-        mongo.db.wanted_persons.insert_one(investigation)
-        flash("Investigation submitted.")
-        return redirect(url_for('home'))
+        if form_submission():
+            mongo.db.wanted_persons.insert_one()
+        return redirect(url_for('wanted'),
+                        flash("Investigation received."))
     crime = mongo.db.crime.find().sort("crime_name", 1)
     return render_template("submit_investigation.html", crime=crime)
 
