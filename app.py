@@ -40,6 +40,18 @@ def search():
                            wanted_persons=wanted_persons)
 
 
+def creating_new_user(request):
+    register = {
+        "username": request.form.get("username").lower(),
+        "password": generate_password_hash(request.form.get("password"))
+    }
+    mongo.db.users.insert_one(register)
+
+    session["user"] = request.form.get("username").lower()
+    flash("Registration Successful!")
+    return True
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -50,16 +62,23 @@ def register():
             flash("Username already exists")
             return redirect(url_for("register"))
 
-        register = {
-            "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
-        }
-        mongo.db.users.insert_one(register)
-
-        session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
-        return redirect(url_for("my_submissions", username=session["user"]))
+        if creating_new_user(request):
+            return redirect(url_for("my_submissions",
+                                    username=session["user"]))
     return render_template("register.html")
+
+
+def is_user_authenticated(request):
+    existing_user = mongo.db.users.find_one(
+        {"username": request.form.get("username".lower())}
+    )
+    if check_password_hash(
+            existing_user["password"], request.form.get("password")):
+        session["user"] = request.form.get("username").lower()
+        flash("Welcome, {}".format(request.form.get("username")))
+        return True
+    else:
+        return False
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -69,13 +88,9 @@ def login():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            if check_password_hash(
-                    existing_user["password"], request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username")))
+            if is_user_authenticated(request):
                 return redirect(url_for(
                     "my_submissions", username=session["user"]))
-
             else:
                 flash("Incorrect username or password")
                 return redirect(url_for("login"))
