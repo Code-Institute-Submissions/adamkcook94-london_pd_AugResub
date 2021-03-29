@@ -120,8 +120,6 @@ def logout():
     return redirect(url_for("login"))
 
 
-# refactor from here
-
 def form_submission():
     investigation = {
         "crime_name": request.form.get("crime_name"),
