@@ -149,27 +149,32 @@ def submit_investigation():
     return render_template("submit_investigation.html", crime=crime)
 
 
+def edit_submission_form(wanted_id):
+    investigation = {
+        "crime_name": request.form.get("crime_name"),
+        "family_name": request.form.get("family_name").upper(),
+        "forename": request.form.get("forename"),
+        "gender": request.form.get("gender"),
+        "last_seen": request.form.get("last_seen"),
+        "date_of_birth": request.form.get("date_of_birth"),
+        "nationality": request.form.get("nationality"),
+        "ethnicity": request.form.get("ethnicity"),
+        "phone_number": request.form.get("phone_number"),
+        "email": request.form.get("email"),
+        "additional_info": request.form.get("additional_info"),
+        "submitted_by": session["user"]
+    }
+    mongo.db.wanted_persons.update(
+        {"_id": ObjectId(wanted_id)}, investigation)
+
+
 @app.route("/edit/<wanted_id>", methods=["GET", "POST"])
 def edit(wanted_id):
     if request.method == "POST":
-        investigation = {
-            "crime_name": request.form.get("crime_name"),
-            "family_name": request.form.get("family_name").upper(),
-            "forename": request.form.get("forename"),
-            "gender": request.form.get("gender"),
-            "last_seen": request.form.get("last_seen"),
-            "date_of_birth": request.form.get("date_of_birth"),
-            "nationality": request.form.get("nationality"),
-            "ethnicity": request.form.get("ethnicity"),
-            "phone_number": request.form.get("phone_number"),
-            "email": request.form.get("email"),
-            "additional_info": request.form.get("additional_info"),
-            "submitted_by": session["user"]
-        }
-        mongo.db.wanted_persons.update(
-            {"_id": ObjectId(wanted_id)}, investigation)
-        flash("Investigation edited.")
-        return redirect(url_for('wanted'))
+        if edit_submission_form(wanted_id):
+            mongo.db.wanted_persons.update(
+                {"_id": ObjectId(wanted_id)})
+        return redirect(url_for('wanted')), flash("Investigation edited.")
     wanted = mongo.db.wanted_persons.find_one({"_id": ObjectId(wanted_id)})
     crime = mongo.db.crime.find().sort("crime_name", 1)
     return render_template("edit.html", wanted=wanted, crime=crime)
