@@ -60,7 +60,30 @@ body {
     margin-top: 10px;
 }
 
-.delete-button {
+
+
+
+/* Wanted Persons */
+
+.wanted-bg {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    color: #2b2d2f;
+}
+
+.card-image {
+    height: 300px;
+}
+
+.suspect-photo {
+    background-size: cover;
+}
+
+/* .delete-button {
     margin-top: 10px;
     
 }
@@ -100,44 +123,10 @@ body {
     width: 75px;
     margin-top: 10px;
 } 
-}
+} */
 
 @media only screen and (max-width: 600px) {
 .mugshot-card {
     width: 78%;
 }
-}
-
-.card-reveal {
-    height: 70%;
-}
-
-.wanted-list {
-    display: inline;
-    float: left;
-}
-
-.mugshot {
-    display: block;
-    padding: 10px;
-    border: 1px solid red;
-    margin-right: 5px;
-}
-
-.previous-icon {
-    margin: 10px;
-}
-
-.next-icon {
-    margin: 10px;
-}
-
-.wanted-bg {
-    background-color: white;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    color: #2b2d2f;
 }

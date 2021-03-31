@@ -28,20 +28,23 @@
                 <div class="col s12 m5 l4 offset-s1">
                     <div class="card mugshot-card">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator img-fluid" src="{{ wanted.suspect_photo }}">
+                            {% if wanted.suspect_photo %}
+                            <img class="activator suspect-photo" src="{{ wanted.suspect_photo }}">
+                            {% else %}
+                            >
+                            {% endif %}
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4 wanted-name">
                                 {{ wanted.family_name }},
                                 {{ wanted.forename }}
                                 {% if session.user|lower == wanted.submitted_by|lower %}
-                                <a href="{{ url_for('edit', wanted_id=wanted._id) }}"
-                                    class="btn-small blue edit-button"><i class="far fa-edit"></i></a>
-                                <a href="{{ url_for('delete_inv', wanted_id=wanted._id) }}"
-                                    class="btn-small red delete-button"><i class="far fa-trash-alt"></i></a>
-                                {% endif %}
-                                <i class="fas fa-caret-up right"></i>
                             </span>
+                            <a href="{{ url_for('edit', wanted_id=wanted._id) }}" class="btn-small blue edit-button"><i
+                                    class="fas fa-edit"></i></a>
+                            <a href="{{ url_for('delete_inv', wanted_id=wanted._id) }}"
+                                class="btn-small red delete-button"><i class="fas fa-trash-alt"></i></a>
+                            {% endif %}
                         </div>
                         <div class="card-reveal">
                             <span class="card-title pi-font">{{ wanted.family_name }},
