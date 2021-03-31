@@ -128,7 +128,7 @@ def form_submission():
         "gender": request.form.get("gender"),
         "last_seen": request.form.get("last_seen"),
         "date_of_birth": request.form.get("date_of_birth"),
-        "nationality": request.form.get("nationality"),
+        "suspect_photo": request.form.get("suspect_photo"),
         "ethnicity": request.form.get("ethnicity"),
         "phone_number": request.form.get("phone_number"),
         "email": request.form.get("email"),
