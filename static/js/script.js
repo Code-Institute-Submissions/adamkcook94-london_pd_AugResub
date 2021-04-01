@@ -6,3 +6,7 @@ $(document).ready(function () {
         yearRange: [1921, 2013]
     });
 });
+
+var modal = document.getElementById('confirm-deletion');
+
+

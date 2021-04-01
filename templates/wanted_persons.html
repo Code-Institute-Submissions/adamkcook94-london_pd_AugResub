@@ -42,8 +42,22 @@
                             </span>
                             <a href="{{ url_for('edit', wanted_id=wanted._id) }}" class="btn-small blue edit-button"><i
                                     class="fas fa-edit"></i></a>
-                            <a href="{{ url_for('delete_inv', wanted_id=wanted._id) }}"
-                                class="btn-small red delete-button"><i class="fas fa-trash-alt"></i></a>
+                            <button class="btn-small red delete-button"
+                                onclick="document.getElementById('confirm-deletion').style.display='block'">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                            <div id="confirm-deletion" class="deletion-modal">
+                                <div class="deletion-container">
+                                    <h3 class="center-align">Delete</h3>
+                                    <p>Are you sure you want to delete your submission?</p>
+                                    <span onclick="document.getElementById('confirm-deletion').style.display='none'"
+                                        class="close" title="Close Modal"><i
+                                            class="fas fa-window-close fa-2x icon-spacing"></i></span>
+                                    <a href="{{ url_for('delete_inv', wanted_id=wanted._id) }}"><i
+                                            class="far fa-trash-alt fa-2x icon-spacing delete"></i></a>
+
+                                </div>
+                            </div>
                             {% endif %}
                         </div>
                         <div class="card-reveal">
@@ -69,12 +83,7 @@
                 <h3 class="center-align">No results found.</h3>
                 {% endif %}
             </div>
-            <div class="row">
-                <div class="col 12 offset-l6">
-                    <i class="fas fa-caret-left fa-5x previous-icon"></i>
-                    <i class="fas fa-caret-right fa-5x next-icon"></i>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>

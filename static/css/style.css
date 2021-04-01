@@ -79,50 +79,65 @@ body {
     height: 300px;
 }
 
-/* .delete-button {
-    margin-top: 10px;
-    
+.deletion-container {
+  padding: 16px;
+  text-align: center;
 }
 
-.edit-button {
-    margin-top: 10px;
-    margin-left: 20px;
+.deletion-modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  overflow: auto; 
+  background: white;
+  margin: 25% 32%;
+  width: 40%; 
+  border: 1px solid #888;
 }
 
-@media only screen and (max-width: 486px) {
-    .edit-button {
-        margin-left: 70px;
-        width: 75px;
-        margin-top: 10px;
-    }
+@media only screen and (max-width: 800px) {
+.deletion-modal {
+    width: 60%;
+    margin: 50% 25%;
+}
 }
 
-@media only screen and (max-width: 486px) {
-.delete-button {
-    margin-left: 70px;
-    width: 75px;
-    margin-top: 10px;
-} 
+@media only screen and (max-width: 500px) {
+.deletion-modal {
+    width: 80%;
+    margin: 75% 10%;
+}
 }
 
-@media only screen and (max-width: 350px) {
-    .edit-button {
-        margin-left: 50px;
-        width: 75px;
-        margin-top: 10px;
-    }
+.close {
+    color: red;
 }
 
-@media only screen and (max-width: 350px) {
-.delete-button {
-    margin-left: 50px;
-    width: 75px;
-    margin-top: 10px;
-} 
-} */
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+.delete {
+    color: #1E89E8;
+}
+
+.delete:hover,
+.delete:focus {
+  color: #40A6FF;
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 600px) {
 .mugshot-card {
     width: 78%;
 }
 }
+
+.icon-spacing {
+    margin: 10px;
+}
+
