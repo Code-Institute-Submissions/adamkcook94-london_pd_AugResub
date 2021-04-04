@@ -27,11 +27,9 @@
                 {% for wanted in wanted_persons %}
                 <div class="col s12 m5 l4 offset-s1">
                     <div class="card mugshot-card center-align">
-                        <div class="card-image waves-effect waves-block waves-light">
+                        <div class="card-image waves-effect waves-block waves-light photo-z-index">
                             {% if wanted.suspect_photo %}
                             <img class="activator suspect-photo" src="{{ wanted.suspect_photo }}">
-                            {% else %}
-                            >
                             {% endif %}
                         </div>
                         <div class="card-content">
@@ -66,6 +64,8 @@
                             <span>
                                 <p class="pi-font">Charge</p>
                                 <p>{{ wanted.crime_name }}</p>
+                                <p class="pi-font">Aliases/Nicknames</p>
+                                <p>{{ wanted.alias }}</p>
                                 <p class="pi-font">Gender</p>
                                 <p>{{ wanted.gender }}</p>
                                 <p class="pi-font">Date of Birth</p>

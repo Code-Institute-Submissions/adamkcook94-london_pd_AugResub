@@ -80,6 +80,7 @@ body {
 }
 
 .deletion-container {
+z-index: 1;
   padding: 16px;
   text-align: center;
 }
@@ -141,3 +142,6 @@ body {
     margin: 10px;
 }
 
+.photo-z-index {
+    z-index: 0;
+}

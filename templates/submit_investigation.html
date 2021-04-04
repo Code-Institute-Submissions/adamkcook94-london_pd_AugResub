@@ -22,16 +22,21 @@
                             <label for="forename">Forename</label>
                         </div>
                         <div class="input-field col s5  offset-l1">
-                            <input id="gender" type="text" name="gender" maxlength="15" class="validate" required>
-                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" class="validate" required>
+                                <option value="" disabled selected>Gender</option>
+                                {% for genders in gender %}
+                                <option value="{{ genders.gender }}">
+                                    {{- genders.gender -}}</option>
+                                {% endfor %}
+                            </select>
                         </div>
                         <div class="input-field col s5">
                             <input id="date_of_birth" name="date_of_birth" type="text" class="datepicker validate">
                             <label for="date_of_birth">Date of Birth</label>
                         </div>
+
                         <div class="input-field col s10 m10 offset-l1">
                             <select id="crime_name" name="crime_name" class="validate" required>
-
                                 <option value="" disabled selected>Charges</option>
                                 {% for charges in crime %}
                                 <option value="{{ charges.crime_name }}">
@@ -40,8 +45,8 @@
                             </select>
                         </div>
                         <div class="input-field col s5 offset-l1">
-                            <input id="suspect_photo" name="suspect_photo" type="url">
-                            <label for="suspect_photo">Suspect Photo</label>
+                            <input id="suspect_photo" name="suspect_photo" type="url" class="validate">
+                            <label for="suspect_photo">Photo</label>
                         </div>
                         <div class="input-field col s5">
                             <input id="ethnicity" name="ethnicity" type="text" maxlength="60" class="validate">

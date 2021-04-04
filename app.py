@@ -145,8 +145,10 @@ def submit_investigation():
             mongo.db.wanted_persons.insert_one()
         return redirect(url_for('wanted'),
                         flash("Investigation received."))
+    gender = mongo.db.gender.find().sort("gender", 1)
     crime = mongo.db.crime.find().sort("crime_name", 1)
-    return render_template("submit_investigation.html", crime=crime)
+    return render_template("submit_investigation.html",
+                           crime=crime, gender=gender)
 
 
 def edit_submission_form(wanted_id):
@@ -176,8 +178,10 @@ def edit(wanted_id):
                 {"_id": ObjectId(wanted_id)})
         return redirect(url_for('wanted')), flash("Investigation edited.")
     wanted = mongo.db.wanted_persons.find_one({"_id": ObjectId(wanted_id)})
+    gender = mongo.db.gender.find().sort("gender", 1)
     crime = mongo.db.crime.find().sort("crime_name", 1)
-    return render_template("edit.html", wanted=wanted, crime=crime)
+    return render_template("edit.html", wanted=wanted,
+                           crime=crime, gender=gender)
 
 
 @app.route("/delete_task/<wanted_id>")

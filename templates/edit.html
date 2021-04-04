@@ -10,7 +10,6 @@
         <div class="row">
             <form class="col s12" method="POST" action="{{ url_for('edit', wanted_id=wanted._id) }}">
                 <div class="card-panel">
-
                     <div class="row">
                         <div class="input-field col s5 offset-l1">
                             <input id="family_name" type="text" value="{{ wanted.family_name }}" name="family_name"
@@ -23,9 +22,18 @@
                             <label for="forename">Forename</label>
                         </div>
                         <div class="input-field col s5  offset-l1">
-                            <input id="gender" type="text" value="{{ wanted.gender }}" name="gender" maxlength="15"
-                                class="validate" required>
-                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" class="validate" required>
+                                <option value="" disabled selected>Gender</option>
+                                {% for genders in gender %}
+                                {% if genders.gender == wanted.gender %}
+                                <option value="{{ genders.gender }}" selected>
+                                    {{- genders.gender -}}</option>
+                                {% else %}
+                                <option value="{{ genders.gender }}">
+                                    {{- genders.gender -}}</option>
+                                {% endif %}
+                                {% endfor %}
+                            </select>
                         </div>
                         <div class="input-field col s5">
                             <input id="date_of_birth" value="{{ wanted.date_of_birth }}" name="date_of_birth"
@@ -45,12 +53,11 @@
                                 {% endif %}
                                 {% endfor %}
                             </select>
-
                         </div>
                         <div class="input-field col s5 offset-l1">
                             <input id="suspect_photo" name="suspect_photo" type="url" value="{{ wanted.suspect_photo }}"
                                 class="validate">
-                            <label for="suspect_photo">Suspect Photo</label>
+                            <label for="suspect_photo">Photo</label>
                         </div>
                         <div class="input-field col s5">
                             <input id="ethnicity" name="ethnicity" type="text" value="{{ wanted.ethnicity }}"
