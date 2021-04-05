@@ -53,11 +53,12 @@
                                             class="fas fa-window-close fa-2x icon-spacing"></i></span>
                                     <a href="{{ url_for('delete_inv', wanted_id=wanted._id) }}"><i
                                             class="far fa-trash-alt fa-2x icon-spacing delete"></i></a>
-
                                 </div>
                             </div>
                             {% endif %}
+
                         </div>
+
                         <div class="card-reveal">
                             <span class="card-title pi-font">{{ wanted.family_name }},
                                 {{ wanted.forename }}<i class="fas fa-times right"></i></span>
@@ -83,7 +84,6 @@
                 <h3 class="center-align">No results found.</h3>
                 {% endif %}
             </div>
-
         </div>
     </div>
 </div>
