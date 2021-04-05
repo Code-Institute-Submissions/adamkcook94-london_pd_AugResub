@@ -29,9 +29,6 @@
                 <ul class="nav-text left hide-on-med-and-down">
                     {% if session.user %}
                     <li class="hvr-underline-from-center nav-item"><a
-                            href="{{ url_for('my_submissions', username=session['user']) }}">{{ username }}
-                            Submissions</a></li>
-                    <li class="hvr-underline-from-center nav-item"><a
                             href="{{ url_for('submit_investigation') }}">Submit Investigation</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('wanted') }}">Wanted
                             Persons</a></li>
@@ -52,9 +49,6 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}"><i class="fas fa-home"></i></a></li>
             {% if session.user %}
-            <li class="hvr-underline-from-center nav-item"><a
-                    href="{{ url_for('my_submissions', username=session['user']) }}">Your
-                    Submissions</a></li>
             <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('submit_investigation') }}">Submit
                     Investigation</a></li>
             <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('wanted') }}">Wanted
