@@ -29,4 +29,26 @@ The goals of the consumer are:
 * A website which allows them to report crimes they have seen committed.
 * A simplistic design that creates a hassle-free process to create an account to submit information.
 
+## UX
+
+### Ideal Visitor
+
+This website is aimed at those who:
+
+* Live in and around the London area.
+* Have information regarding a crime that has been committed.
+* Would like to report a dangerous individual.
+
+Visitors to the website will be looking for:
+
+* A safe and secure way to report crimes. 
+* Information on staying safe.
+* Dangerous individuals in their local area to be wary of.
+
+This project helps the consumer achieve this by:
+
+* Offering users a safe and secure path to creating an account to submit reports.
+* Providing a page on tips to staying safe.
+* Being able to search for their local areas in the 'Wanted Persons' page in order to track dangerous 
+indivduals in their area.
 
