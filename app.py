@@ -63,7 +63,7 @@ def register():
             return redirect(url_for("register"))
 
         if creating_new_user(request):
-            return redirect(url_for("my_submissions",
+            return redirect(url_for("submit_investigation",
                                     username=session["user"]))
     return render_template("register.html")
 
@@ -90,7 +90,7 @@ def login():
         if existing_user:
             if is_user_authenticated(request):
                 return redirect(url_for(
-                    "my_submissions", username=session["user"]))
+                    "submit_investigation", username=session["user"]))
             else:
                 flash("Incorrect username or password")
                 return redirect(url_for("login"))
@@ -99,18 +99,6 @@ def login():
             flash("Incorrect username or password")
             return redirect(url_for("login"))
     return render_template("login.html")
-
-
-@app.route("/my_submissions/<username>", methods=["GET", "POST"])
-def my_submissions(username):
-    # grab user from mongoDB. follow this pathway for specific user data.
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-
-    if session["user"]:
-        return render_template("my_submissions.html", username=username)
-
-    return redirect(url_for("login"))
 
 
 @app.route("/logout")
