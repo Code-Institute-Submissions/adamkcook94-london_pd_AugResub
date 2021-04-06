@@ -23,7 +23,7 @@ body {
     background-image: url("../images/ldnpd.png");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     display: flex;
     color: #2b2d2f;
@@ -38,7 +38,54 @@ body {
     border: #2b2d2f;
 }
 
+.fa-twitter {
+    color: rgba(255, 255, 242, 1);
+    padding: 20px 35px;
+    background: rgba(52, 162, 247);
+    border-radius: 25px;
+    margin: 50px;
+}
 
+.fa-twitter:hover {
+    background: grey;
+}
+
+.fa-facebook-f {
+    color: rgba(255, 255, 242, 1); 
+    padding: 20px 45px;
+    background: #28589c;
+    border-radius: 25px;
+    margin: 50px;
+}
+
+.fa-facebook-f:hover {
+    background: grey;
+}
+
+.fa-instagram {
+    color: rgba(255, 255, 242, 1);
+    padding: 20px 35px;
+    background: black;
+    border-radius: 25px;
+    margin: 50px;
+}
+
+.fa-instagram:hover {
+    background: grey;
+    color: black;
+}
+
+.fa-snapchat-ghost {
+    color: white;
+    padding: 20px 35px;
+    background:rgb(211, 208, 33);
+    border-radius: 25px;
+    margin: 50px;
+}
+
+.fa-snapchat-ghost:hover {
+    background: grey;
+}
 
 @media only screen and (max-width: 1400px) {
   .icon-position {
@@ -66,9 +113,6 @@ body {
 .user-icon {
     margin-top: 10px;
 }
-
-
-
 
 /* Wanted Persons */
 
