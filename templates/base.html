@@ -19,7 +19,6 @@
     {% endblock %}
     <title>London Police Department</title>
 </head>
-
 <body>
     <header>
         <nav class="nav-extended nav-color">
@@ -40,12 +39,11 @@
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('register') }}">Register</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('wanted') }}">Wanted
                             Persons</a></li>
-                    <li class="hvr-underline-from-center nav-item"><a href="#">Stay Safe</a></li>
+                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('stay_safe') }}">Stay Safe</a></li>
                     {% endif %}
                 </ul>
             </div>
         </nav>
-
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}"><i class="fas fa-home"></i></a></li>
             {% if session.user %}
@@ -59,13 +57,10 @@
             <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('register') }}">Register</a></li>
             <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('login') }}">Log In</a></li>
             <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('wanted') }}">Wanted Persons</a></li>
-            <li class="hvr-underline-from-center nav-item"><a href="#">Stay Safe</a></li>
-
+            <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('stay_safe') }}">Stay Safe</a></li>
             {% endif %}
-
         </ul>
     </header>
-
     <section>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
@@ -78,11 +73,8 @@
         {% endif %}
         {% endwith %}
     </section>
-
     {% block content %}
     {% endblock %}
-
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -90,5 +82,4 @@
     {% block scripts %}
     {% endblock %}
 </body>
-
 </html>

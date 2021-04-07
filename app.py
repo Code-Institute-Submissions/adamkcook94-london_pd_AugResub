@@ -23,6 +23,11 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/stay_safe")
+def stay_safe():
+    return render_template("stay_safe.html")
+
+
 @app.route("/wanted")
 def wanted():
     wanted_persons = mongo.db.wanted_persons.find()
