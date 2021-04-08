@@ -214,3 +214,25 @@ body {
 }
 
 /* Stay Safe */
+
+.stay-safe-background {
+  background-image: url("../images/ldn-pd.png");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  color: #2b2d2f;
+}
+
+.stay-safe-margins {
+  margin: 50px;
+}
+
+.stay-safe-icon-margin {
+  margin-top: 15px;
+}
+
+.stay-safe-line-height {
+  line-height: 1.6;
+}
