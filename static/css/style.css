@@ -33,7 +33,7 @@ body {
   background-image: url("../images/ldn-pd.png");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   color: #2b2d2f;
@@ -52,6 +52,10 @@ body {
 .card-panel {
   background-color: #f8f8ff;
   border: #2b2d2f;
+}
+
+.fa-virus {
+  color: black;
 }
 
 .fa-twitter {
@@ -130,6 +134,9 @@ body {
   margin-top: 10px;
 }
 
+.met-advice-margin {
+  margin: 50px;
+}
 /* Wanted Persons */
 
 .wanted-bg {
