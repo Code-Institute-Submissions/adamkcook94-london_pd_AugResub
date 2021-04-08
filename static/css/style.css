@@ -54,7 +54,43 @@ body {
   border: #2b2d2f;
 }
 
+.advice-icons {
+  margin: 20px;
+}
+
+.advice-text-color {
+  color: black;
+}
+
 .fa-virus {
+  color: maroon;
+}
+
+.fa-virus:hover {
+  color: black;
+}
+
+.fa-laptop {
+  color: navy;
+}
+
+.fa-laptop:hover {
+  color: black;
+}
+
+.fa-paw {
+  color: brown;
+}
+
+.fa-paw:hover {
+  color: black;
+}
+
+.fa-door-open {
+  color: #654321;
+}
+
+.fa-door-open:hover {
   color: black;
 }
 
@@ -85,26 +121,13 @@ body {
 .fa-instagram {
   color: rgba(255, 255, 242, 1);
   padding: 20px 35px;
-  background: black;
+  background: grey;
   border-radius: 25px;
   margin: 50px;
 }
 
 .fa-instagram:hover {
-  background: grey;
-  color: black;
-}
-
-.fa-snapchat-ghost {
-  color: white;
-  padding: 20px 35px;
-  background: rgb(211, 208, 33);
-  border-radius: 25px;
-  margin: 50px;
-}
-
-.fa-snapchat-ghost:hover {
-  background: grey;
+  background: black;
 }
 
 @media only screen and (max-width: 1400px) {
