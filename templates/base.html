@@ -31,6 +31,7 @@
                             href="{{ url_for('submit_investigation') }}">Submit Investigation</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('wanted') }}">Wanted
                             Persons</a></li>
+                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('stay_safe') }}">Stay Safe</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('logout') }}">Log
                             Out</a></li>
                     {% else %}
@@ -39,7 +40,7 @@
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('register') }}">Register</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('wanted') }}">Wanted
                             Persons</a></li>
-                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('stay_safe') }}">Stay Safe</a></li>
+                    
                     {% endif %}
                 </ul>
             </div>
@@ -51,6 +52,7 @@
                     Investigation</a></li>
             <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('wanted') }}">Wanted
                     Persons</a></li>
+            <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('stay_safe') }}">Stay Safe</a></li>
             <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('logout') }}">Log
                     Out</a></li>
             {% else %}
