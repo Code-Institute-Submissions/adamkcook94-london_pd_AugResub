@@ -236,3 +236,9 @@ body {
 .stay-safe-line-height {
   line-height: 1.6;
 }
+
+/* Submit Investigation */
+
+.si-extra-information {
+  margin-top: 20px;
+}
