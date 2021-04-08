@@ -20,7 +20,7 @@ body {
 /* Homepage */
 
 .home {
-  background-image: url("../images/ldnpd.png");
+  background-image: url("../images/ldn-pd.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -30,7 +30,7 @@ body {
 }
 
 .background-home {
-  background-image: url("../images/ldnpd.png");
+  background-image: url("../images/ldn-pd.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
