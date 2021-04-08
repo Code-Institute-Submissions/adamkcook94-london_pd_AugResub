@@ -27,20 +27,20 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="nav-text left hide-on-med-and-down">
                     {% if session.user %}
+                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('wanted') }}">Wanted
+                        Persons</a></li>
+                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('stay_safe') }}">Stay Safe</a></li>
                     <li class="hvr-underline-from-center nav-item"><a
                             href="{{ url_for('submit_investigation') }}">Submit Investigation</a></li>
-                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('wanted') }}">Wanted
-                            Persons</a></li>
-                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('stay_safe') }}">Stay Safe</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('logout') }}">Log
                             Out</a></li>
                     {% else %}
+                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('wanted') }}">Wanted
+                        Persons</a></li>
+                        <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('stay_safe') }}">Stay Safe</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('login') }}">Log
                             In</a></li>
                     <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('register') }}">Register</a></li>
-                    <li class="hvr-underline-from-center nav-item"><a href="{{ url_for('wanted') }}">Wanted
-                            Persons</a></li>
-                    
                     {% endif %}
                 </ul>
             </div>
