@@ -95,7 +95,7 @@ def login():
         if existing_user:
             if is_user_authenticated(request):
                 return redirect(url_for(
-                    "submit_investigation", username=session["user"]))
+                    "wanted", username=session["user"]))
             else:
                 flash("Incorrect username or password")
                 return redirect(url_for("login"))
