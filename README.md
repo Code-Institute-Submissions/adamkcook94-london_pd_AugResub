@@ -120,11 +120,11 @@ echo web: python3 app.py > Procfile.
 
 9. Set the following config vars:
 
-DEBUG = FALSE
-IP = 0.0.0.0
-MONGO_URI = mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority
-PORT = 5000
-SECRET_KEY = <your_secret_key>
+- DEBUG = FALSE
+- IP = 0.0.0.0
+- MONGO_URI = mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority
+- PORT = 5000
+- SECRET_KEY = <your_secret_key>
 
 10. In the Heroku dashboard click "Deploy"
 
