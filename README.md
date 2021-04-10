@@ -130,4 +130,9 @@ SECRET_KEY = <your_secret_key>
 
 11. In "Manual Deployment" ensure the master branch has been selected and click "Deploy Branch".
 
-12. The site has now been deployed.
+12. The site has now been deployed
+
+## Credits
+
+- Interpol
+- Metropolitan Police
