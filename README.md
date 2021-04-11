@@ -58,20 +58,20 @@ The following images are wireframes from the website. Please click to enlarge.
 <img src="static/images/Home(Phone).png" alt="home-phone-wireframe" title="Index" width="500" height="200">
 <img src="static/images/Home(Tablet).png" alt="home-tablet-wireframe" title="Index" width="500" height="200">
 <img src="static/images/Log-In.png" alt="log-in-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Log-In(Phone).png" alt="log-in-phone-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Log-In(Tablet).png" alt="log-in-tablet-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Register.png" alt="register-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Register(Phone).png" alt="register-phone-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Register(Tablet).png" alt="register-tablet-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Stay-Safe.png" alt="stay-safe-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Stay-Safe(Phone).png" alt="stay-safe-phone-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Stay-Safe(Tablet).png" alt="stay-safe-tablet-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Submit-Investigation.png" alt="submit-investigation-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Submit-Investigation(Phone).png" alt="submit-investigation-phone-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Submit-Investigation(Tablet).png" alt="submit-investigation-tablet-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Wanted-Persons.png" alt="wanted-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Wanted-Persons(Phone).png" alt="wanted-phone-wireframe" title="Index" width="500" height="200">
-<img src="static/images/wireframe/Wanted-Persons(Tablet).png" alt="wanted-tablet-wireframe" title="wanted-persons" width="500" height="200">
+<img src="static/images/Log-In(Phone).png" alt="log-in-phone-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Log-In(Tablet).png" alt="log-in-tablet-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Register.png" alt="register-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Register(Phone).png" alt="register-phone-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Register(Tablet).png" alt="register-tablet-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Stay-Safe.png" alt="stay-safe-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Stay-Safe(Phone).png" alt="stay-safe-phone-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Stay-Safe(Tablet).png" alt="stay-safe-tablet-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Submit-Investigation.png" alt="submit-investigation-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Submit-Investigation(Phone).png" alt="submit-investigation-phone-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Submit-Investigation(Tablet).png" alt="submit-investigation-tablet-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Wanted-Persons.png" alt="wanted-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Wanted-Persons(Phone).png" alt="wanted-phone-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Wanted-Persons(Tablet).png" alt="wanted-tablet-wireframe" title="wanted-persons" width="500" height="200">
 
 ## Client Stories
 
