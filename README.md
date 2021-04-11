@@ -54,6 +54,7 @@ This project helps the consumer achieve this by:
 
 The following images are wireframes from the website. Please click to enlarge.
 
+<<<<<<< HEAD
 <img src="images/wireframe/Home.png" alt="index-wireframe" title="Index" width="500" height="200">
 <img src="images/wireframe/Home(Phone).png" alt="index-wireframe" title="Index" width="500" height="200">
 <img src="images/wireframe/Home(Tablet).png" alt="index-wireframe" title="Index" width="500" height="200">
@@ -71,7 +72,8 @@ The following images are wireframes from the website. Please click to enlarge.
 <img src="images/wireframe/Submit-Investigation(Tablet).png" alt="index-wireframe" title="Index" width="500" height="200">
 <img src="images/wireframe/Wanted-Persons.png" alt="index-wireframe" title="Index" width="500" height="200">
 <img src="images/wireframe/Wanted-Persons(Phone).png" alt="index-wireframe" title="Index" width="500" height="200">
-<img src="../images/wireframe/Wanted-Persons(Tablet).png" alt="wp-tablet-wireframe" title="wanted-persons" width="500" height="200">
+<img src="../static/images/wireframe/Wanted-Persons(Tablet).png" alt="wp-tablet-wireframe" title="wanted-persons" width="500" height="200">
+
 
 ## Client Stories
 
