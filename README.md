@@ -231,9 +231,14 @@ i. Change screen size to mobile and tablet devices to ensure the image scales de
 
 3. Card Panels
 
-i. 
+i. Change screen size to mobile and tablet devices to ensure the panels adapt efficiently depending on screen size.
+
+ii. On larger devices panels do not scale evenly however due to my inexperience using Materialize CSS this was unable to
+be fixed.
 
 4. Links to Metropoliton Police web pages
+
+i. Clicking on each 
 
 ## Deployment
 
