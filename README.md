@@ -141,11 +141,30 @@ This page is for users who have submitted an investigation and would like to edi
 makes it easy for users to either commit to the changes they've made or cancel them with the 'Cancel' button or the 'Make
 Changes' button.
 
-## Future Additions
+## Future Implementations
+
+- When users try to edit their submissions a modal pops up instead of being redirected to a new page so that the website feels
+  more fluid.
+- Similar to the deletion modal implemented in the delete area of the website, the same functionality applied to the 'Log Out'
+  button.
+- Varied page strucutre especially in the home page where social media icons and 'Advice From the Met' links feel too simplistic.
 
 ## Technologies Used
 
-## Testing
+- HTML
+- CSS
+- GitHUB
+- Python
+- Flask
+- Werkzeug
+- Heroku
+- Google Fonts
+- Hover.css
+- jQuery
+- All images imported were downloaded from Google Images and then stored and linked by the developer.
+- MaterializeCSS
+
+
 
 ## Client Stories Testing
 
