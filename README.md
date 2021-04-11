@@ -176,6 +176,14 @@ the function work.
 
 ## Client Stories Testing
 
+The common pathway for users throughout the website would be:
+
+Home > Wanted Persons > Stay Safe
+
+However users with information to submit would likely have this pathway:
+
+Home > Wanted Persons > Register > Submit Investigation > Log Out
+
 ## Testing Client Stories
 
 ## Manual Testing of all elements and functionality on every page
