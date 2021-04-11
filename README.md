@@ -207,7 +207,33 @@ iii. In future when users have logged in, they can edit and delete their submiss
 
 i. Viewers of wanted people have access to user's email address and telephone number.
 
+## Manual Testing of all elements and functionality on every page
 
+### Home
+
+1. Navigation Bar
+
+i. Clicking the home icon results in sending users to the home page.
+
+ii. Hovering over each link has an underline effect and color changes to a darker shade.
+
+iii. Right click and select “Inspect” to change screen size to that of a mobile device or tablet to confirm that the
+navigation bar is responsive.
+
+iv. Clicking each link in the navigation bar sends user to appropriate pages.
+
+v. Adjusting screen size small and medium size screen devices results in navigation bar retreating to a burger menu
+with fully functioning links and space for users to click away from the menu.
+
+2. Background Image
+
+i. Change screen size to mobile and tablet devices to ensure the image scales depending on screen size.
+
+3. Card Panels
+
+i. 
+
+4. Links to Metropoliton Police web pages
 
 ## Deployment
 
