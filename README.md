@@ -52,6 +52,22 @@ This project helps the consumer achieve this by:
 - Being able to search for their local areas in the 'Wanted Persons' page in order to track dangerous
   indivduals in their area.
 
+## Client Stories
+
+## Features
+
+## Future Additions
+
+## Technologies Used
+
+## Testing
+
+## Client Stories Testing
+
+## Testing Client Stories
+
+## Manual Testing of all elements and functionality on every page
+
 ## Deployment
 
 ### How to run this project locally
