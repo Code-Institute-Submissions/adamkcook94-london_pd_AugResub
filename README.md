@@ -54,7 +54,7 @@ This project helps the consumer achieve this by:
 
 The following images are wireframes from the website. Please click to enlarge.
 
-<img src="../wireframe/Home.png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="static/images/Home.png" alt="home-wireframe" title="Home" width="500" height="200">
 <img src="images/wireframe/Home(Phone).png" alt="index-wireframe" title="Index" width="500" height="200">
 <img src="images/wireframe/Home(Tablet).png" alt="index-wireframe" title="Index" width="500" height="200">
 <img src="images/wireframe/Log-In.png" alt="index-wireframe" title="Index" width="500" height="200">
@@ -164,7 +164,9 @@ Changes' button.
 - All images imported were downloaded from Google Images and then stored and linked by the developer.
 - MaterializeCSS
 
+## Testing
 
+- [W3C HTML Code Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Flondon-pd.herokuapp.com%2F)
 
 ## Client Stories Testing
 
