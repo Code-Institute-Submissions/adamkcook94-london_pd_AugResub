@@ -54,8 +54,7 @@ This project helps the consumer achieve this by:
 
 The following images are wireframes from the website. Please click to enlarge.
 
-<<<<<<< HEAD
-<img src="images/wireframe/Home.png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="../wireframe/Home.png" alt="index-wireframe" title="Index" width="500" height="200">
 <img src="images/wireframe/Home(Phone).png" alt="index-wireframe" title="Index" width="500" height="200">
 <img src="images/wireframe/Home(Tablet).png" alt="index-wireframe" title="Index" width="500" height="200">
 <img src="images/wireframe/Log-In.png" alt="index-wireframe" title="Index" width="500" height="200">
@@ -74,8 +73,13 @@ The following images are wireframes from the website. Please click to enlarge.
 <img src="images/wireframe/Wanted-Persons(Phone).png" alt="index-wireframe" title="Index" width="500" height="200">
 <img src="../static/images/wireframe/Wanted-Persons(Tablet).png" alt="wp-tablet-wireframe" title="wanted-persons" width="500" height="200">
 
-
 ## Client Stories
+
+- As a first-time visitor of the website I want a quick and easy way to see people I need to watch out for.
+- As a potential regular user of this website I want to be able to have a secure pathway to submit profiles of
+  dangerous individuals.
+- As someone that wants to submit investigations I want to have a confidential method of submitting profiles
+  to this website.
 
 ## Features
 
