@@ -83,6 +83,64 @@ The following images are wireframes from the website. Please click to enlarge.
 
 ## Features
 
+Each page consisters of a responsive navigation bar with a 'Home' icon in the top right which will redirect users
+to the homepage. The navigation bar also links the user to all areas of the website - 'Wanted Persons', 'Stay Safe',
+'Log In' and 'Register'. When the user is logged in, the 'Log In', and 'Register' pages are replaced with 'Submit
+Investigation' and 'Log Out' links.
+
+### Home
+
+The home page contains a background of the city of London which has the purpose of instantly letting the user know
+that this is a London based service. It also displays relevant information to let users understand what the service
+provides, how it is provided and how the user can contribute.
+
+There are links to advice pages and social media pages connected to London's Metropolitan Police which is used to
+keep users updated on how to stay safe and keep them updated on the goings on in and around London.
+
+### Wanted Persons
+
+'Wanted Persons' consists of a search bar and mugshots of currently wanted people in the London area. This page is
+available to users with and without an account. If users do not have an account registered they can have view those
+that are currently wanted. This is done to ensure that as many people are informed about dangerous individuals in London.
+
+Each individual profile that has been submitted can be clicked on, revealing the persons family name, suspected offences,
+forename, aliases, etc.
+
+If users also want to specifically search for an individual the page has search functionality, where name searches can be
+done using the search bar, whilst users with an account registered will have an edit and delete button displayed for the
+submissions they have sent in.
+
+### Stay Safe
+
+The 'Stay Safe' page was created to inform users of tips they can implement in their everyday lives to stay safe in their
+area. The information displayed was intended to be short and quick to the point in order to provide easy to remember
+information.
+
+### Log In
+
+The 'Log In' page is for users that have an account registered. If users without a registered account have misclicked on
+this page, a link has been provided underneath the log in function to redirect them to the 'Register' page.
+
+### Register
+
+The 'Register' page is for users that would like to set up an account to submit an investigation now or for the future.
+Akin to the 'Log In' page, if users that have a registered account with the website accidentally click here they can be
+re-routed to the 'Log In' page.
+
+### Submit Investigation
+
+This page is viewable only for registered users. In this page, registered users can submit profiles of individuals they
+want to be tracked and investigated.
+
+This page has form submission functionality where once a user has filled out the form, the profile will be sent straight
+to 'Wanted Persons' for every user to be able to see.
+
+### Edit Investigation
+
+This page is for users who have submitted an investigation and would like to edit the information they have given. This page
+makes it easy for users to either commit to the changes they've made or cancel them with the 'Cancel' button or the 'Make
+Changes' button.
+
 ## Future Additions
 
 ## Technologies Used
