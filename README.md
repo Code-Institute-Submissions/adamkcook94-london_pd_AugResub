@@ -77,9 +77,9 @@ The following images are wireframes from the website. Please click to enlarge.
 
 - As a first-time visitor of the website I want a quick and easy way to see people I need to watch out for.
 - As a potential regular user of this website I want to be able to have a secure pathway to submit profiles of
-  dangerous individuals.
-- As someone that wants to submit investigations I want to have a confidential method of submitting profiles
-  to this website.
+  dangerous individuals as well as having control over my submissions.
+- As someone that wants to submit an investigation I want to be contacted upon any updates on the arrest of
+  the person I've submitted.
 
 ## Features
 
@@ -186,7 +186,28 @@ Home > Wanted Persons > Register > Submit Investigation > Log Out
 
 ## Testing Client Stories
 
-## Manual Testing of all elements and functionality on every page
+1. As a first-time visitor of the website I want a quick and easy way to see people I need to watch out for.
+
+i. Using a clean and functional navigation bar 'Wanted Persons' is clearly visible to the user, as well as being the
+first link on the navigation bar.
+ii. With the website's one-page formatting there is a short trip to this page.
+
+2. As a potential regular user of this website I want to be able to have a secure pathway to submit profiles of
+   dangerous individuals as well as having control over my submissions.
+
+i. Using the 'Register' page's registration functionality users can create a secure account bolstered with the
+use of Werkzeug.
+
+ii. Once registration has been completed, users can submit investigations using the 'Submit Investigation' page.
+
+iii. In future when users have logged in, they can edit and delete their submissions.
+
+3. As someone that wants to submit an investigation I want to be contacted upon any updates on the arrest of
+   the person I've submitted.
+
+i. Viewers of wanted people have access to user's email address and telephone number.
+
+
 
 ## Deployment
 
