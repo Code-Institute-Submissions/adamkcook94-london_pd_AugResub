@@ -238,7 +238,161 @@ be fixed.
 
 4. Links to Metropoliton Police web pages
 
-i. Clicking on each 
+i. Clicking on each external link will send user to relevant link pages.
+
+ii. Clicking on each external link will open a new page for users.
+
+### Stay Safe
+
+1. Navigation Bar
+
+i. Covered in 'Home' section.
+
+2. Background Image
+
+i. Covered in 'Home' section.
+
+3. Information Text
+
+i. Change screen size to mobile and tablet devices to ensure that text and icons still maintain readability and neat
+structure.
+
+### Log In
+
+1. Navigation Bar
+
+i. Covered in 'Home' section.
+
+2. Background Image
+
+i. Covered in 'Home' section.
+
+3. Log In Panel
+
+i. Changed screen devices to mobile and tablet devices to make sure it maintains readability and neat structure.
+
+4. Log In Functionality
+
+i. Entered registered username and user is given access to appropriate pages and sent to 'Wanted Persons'.
+
+ii. Entered invalid username/password and flash message 'Incorrect username or password' is displayed.
+
+5. External Register link
+
+i. Clicked on 'Register' method to ensure user is sent to 'Register' page.
+
+### Register
+
+1. Navigation Bar
+
+i. Covered in 'Home' section.
+
+2. Background Image
+
+i. Covered in 'Home' section.
+
+3. Register Panel
+
+i. Changed screen devices to mobile and tablet devices to make sure it maintains readability and neat structure.
+
+4. Register Functionality
+
+i. Created new user details.
+
+ii. Upon creating new user, user is sent to 'Submit Investigation' page.
+
+iii. Checked MongoDB to ensure new user has been added to website database.
+
+5. External Log In Link
+
+i. Clicked on 'Log In' method to ensure user is sent to 'Log In' page.
+
+### Wanted Persons
+
+1. Navigation Bar
+
+i. Covered in 'Home' section.
+
+2. Background Image
+
+i. Covered in 'Home' section.
+
+3. Search Bar
+
+i. Entered name with no match and relevant message "No results found." was displayed to user.
+
+ii. Clicking on 'search' with a relevant name retrieved relevant profiles.
+
+iii. Clicking on 'reset' after results have come up resets the page appropriately.
+
+iv. Maintains functionality throughout mobile and tablet devices.
+
+4. Mugshot Panels
+
+i. Clicking on panels results in person's relevant information being displayed to the user.
+
+ii. Structure of the panels maintains a fluid formation throughout mobile and tablet devices.
+
+5. Edit and Delete buttons
+
+i. Clicking on edit re-routes user to 'edit investigation' page.
+
+ii. Clicking on delete brings user a modal to confirm whether user would like to delete submission
+or not.
+
+iii. Edit and Delete buttons maintain fluidity throughout mobile and tablet devices.
+
+iv. Deletion modal still maintains fluidity throughout mobile and tablet devices.
+
+## Submit Investigation
+
+1. Navigation Bar
+
+i. Covered in 'Home' section.
+
+2. Background Image
+
+i. Covered in 'Home' section.
+
+3. Form submission
+
+i. Left each of 'Family Name', 'Forename', 'Phone Number' and 'E-mail' blank and error message displayed
+making sure the user enters the necessary details.
+
+ii. Entered appropriate details for submission and upon clicking 'submit', received flash message along
+with submission being added to 'Wanted Persons'.
+
+4. Form structure
+
+i. Changed screen size to mobile and tablet devices and form maintains fluidity.
+
+## Edit Investigation
+
+1. Navigation Bar
+
+i. Covered in 'Home' section.
+
+2. Background Image
+
+i. Covered in 'Home' section.
+
+3. Form Details
+
+i. Submission form information has user's original submission information filled into the form.
+
+4. Cancel and Edit Buttons
+
+i. Clicking on 'Cancel' re-routes user to 'Wanted Persons'.
+
+ii. Clicking on 'Edit' successfully changes form information.
+
+## Log Out
+
+1. Log Out Functionality
+
+i. Clicking on 'Log Out' in navigation bar successfully logs out user.
+
+ii. Message 'You have been logged out' displays upon user clicking on button.
 
 ## Deployment
 
