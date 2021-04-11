@@ -7,6 +7,5 @@ $(document).ready(function () {
     });
 });
 
-var modal = document.getElementById('confirm-deletion');
 
 

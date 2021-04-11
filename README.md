@@ -167,6 +167,12 @@ Changes' button.
 ## Testing
 
 - [W3C HTML Code Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Flondon-pd.herokuapp.com%2F)
+- W3C CSS Validator:
+  <img src="static/images/w3c-css-validator.png" alt="CSS Validator" title="CSS Validator" width="500" height="200">
+
+-JSHint:
+When using JSHint, there were no errors apart from '\$' being an undefined variable. However this was required to make
+the function work.
 
 ## Client Stories Testing
 
