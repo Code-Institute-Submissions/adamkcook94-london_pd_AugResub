@@ -52,6 +52,27 @@ This project helps the consumer achieve this by:
 - Being able to search for their local areas in the 'Wanted Persons' page in order to track dangerous
   indivduals in their area.
 
+The following images are wireframes from the website. Please click to enlarge.
+
+<img src="images/wireframes/Home.png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Home(Phone).png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Home(Tablet).png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Log-In.png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Log-In(Phone).png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Log-In(Tablet).png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Register.png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Register(Phone).png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Register(Tablet).png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Stay-Safe.png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Stay-Safe(Phone).png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Stay-Safe(Tablet).png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Submit-Investigation.png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Submit-Investigation(Phone).png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Submit-Investigation(Tablet).png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Wanted-Persons.png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Wanted-Persons(Phone).png" alt="index-wireframe" title="Index" width="500" height="200">
+<img src="images/wireframes/Wanted-Persons(Tablet).png" alt="index-wireframe" title="Index" width="500" height="200">
+
 ## Client Stories
 
 ## Features
