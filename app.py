@@ -142,7 +142,7 @@ def submit_investigation():
             if is_user_authenticated(request):
                 return redirect(url_for(
                     "wanted", username=session["user"]))
-            
+
             else:
                 flash("Incorrect username or password")
                 return redirect(url_for("login"))
@@ -200,4 +200,4 @@ def delete_inv(wanted_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
