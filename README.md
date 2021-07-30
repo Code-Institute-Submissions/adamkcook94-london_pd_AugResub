@@ -166,7 +166,8 @@ Changes' button.
 
 ## Testing
 
-- [W3C HTML Code Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Flondon-pd.herokuapp.com%2F)
+-[W3C HTML Code Validator
+  <img src="static/images/w3c-html-validator.png" alt="CSS Validator" title="CSS Validator" width="500" height="200">
 - W3C CSS Validator:
   <img src="static/images/w3c-css-validator.png" alt="CSS Validator" title="CSS Validator" width="500" height="200">
 
